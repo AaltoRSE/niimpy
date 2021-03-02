@@ -41,7 +41,8 @@ Emilianna uses Niimpy to load in the data. First she installs niimpy using
 `pip install niimpy`. In a Jupyter notebook she runs
 
 ```
-  data = niimpy.load("data.sql")
+  import niimpy
+  data = niimpy.open("data.sql")
 ```
 
 Niimpy runs an automatic quality
@@ -52,14 +53,14 @@ what kinds quality checks she should use and what the thresholds should be.
 
 One of the measurements, the heart beat monitor, should produce data continuously.
 If there is no data for an significant period of time, she decides that data is
-not usable. To check this, she gets the ocurence metric, which returns the number
+not usable. To check this, she gets the occurence metric, which returns the number
 of 12 minute intervals within an hour when the device was active.
 
 ```
   data.occurrence("HeartRate", user=niimpy.ALL)
 ```
 
-She then removes the data with occurence numbers less than 5.
+She then removes the data with occurrence numbers less than 5.
 
 ... exact commands to filter data by quality thresholds ...
 

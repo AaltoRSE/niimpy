@@ -10,6 +10,8 @@ Welcome to Niimpy's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   Basic Usage <basic>
+
    Introduction
    Manual
 
